@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from calc import calculate
+
 import wordstats
 from wordstats import char_count, word_count, longest_word
 
@@ -33,6 +34,8 @@ def wordstatsindex():
         return render_template('wordstats.html', average_length=average_length, word_count=words, char_count=chars, longest_word=long_word)
     else:
         return render_template('wordstats.html', average_length=None, word_count=None, char_count=None)
+
+
 
 if __name__ == '__main__':
     app.run()
