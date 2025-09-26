@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from calc import calculate
+
 import wordstats
 
 app = Flask(__name__)
@@ -29,6 +30,8 @@ def wordstatsindex():
         return render_template('wordstats.html', average_length=average_length)
     else:
         return render_template('wordstats.html', average_length=None)
+
+
 
 if __name__ == '__main__':
     app.run()
