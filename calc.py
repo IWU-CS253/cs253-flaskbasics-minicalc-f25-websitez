@@ -13,8 +13,10 @@ def calculate(current_value, num, clear):
             except:
                 return 'Error'
         else:
+            if num == "^":
+                return float(current_value)*float(current_value)
             if num == "sqrt":
-                return sqrt(int(current_value))
+                return sqrt(float(current_value))
             # Append the pressed button value to the current value
             return current_value + num
     return current_value
